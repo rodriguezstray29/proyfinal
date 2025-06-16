@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Principal } from "./components/Principal";
 import { Peliculas } from "./components/Peliculas";
 import { Cartelera } from "./components/Cartelera";
+import { Sabores } from "./components/Sabores";
 
 function Contenido(props) {
   return (
@@ -25,7 +26,7 @@ function Contenido(props) {
                       <ul className="flex justify-center gap-10">
                         <li>
                           <Link
-                            to="/"
+                            to="/pag1"
                             className="relative px-6 py-2 font-bold text-cyan-300 transition duration-300 ease-in-out border-2 border-cyan-500 rounded-full shadow-md hover:shadow-cyan-500/50 hover:bg-cyan-800/20 hover:text-white"
                           >
                             <span className="absolute inset-0 rounded-full blur-md bg-cyan-500 opacity-10 hover:opacity-20 transition"></span>
@@ -67,7 +68,7 @@ function Contenido(props) {
                             <div className="flex flex-col sm:flex-row gap-4 mt-4">
                               <button className="btn btn-accent btn-wide hover:scale-105 transition shadow-lg">
                                 <Link
-                                  to="/pag2">
+                                  to="/pag3">
                                   🎟️ Ver Cartelera
                                 </Link>
                               </button>
@@ -106,11 +107,10 @@ function Contenido(props) {
       </nav>
       <div className="Contenido">
         <Routes >
-          <Route path="/" element={<Principal></Principal>}></Route>
+          <Route path="/pag1" element={<Principal></Principal>}></Route>
           <Route path="/pag2" element={<Peliculas></Peliculas>}></Route>
           <Route path="/pag3" element={<Cartelera></Cartelera>}></Route>
           <Route path="/pag4" element={<Sabores></Sabores>}></Route>
-
         </Routes>
       </div>
     </div>
